@@ -1,17 +1,33 @@
+//encapsulation
 class School{
-    static location = "manila";
-    static population = "40000";
-    
-    constructor(name, population, location){
-        this.name = name;
-        this.population = population;
-        this.location = location;
-    }
-
-  static offer(course){
-        console.log(`${this.name} located in ${this.location} has a population of ${this.population}`);
-    }
+setName(name){
+    this.name = name;
 }
 
-let ust = new School("ust", 40000, "manila");
-School.offer("IT");
+getName(){
+    return this.name;
+}
+
+setLocation(location){
+    this.location = location;
+}
+
+getLocation(){
+     return this.location;
+}
+
+setPopulation(population){
+    this.population = population;
+}
+
+getPopulation(){
+    return this.population;
+}
+}
+
+let ust = new School();
+ust.setName("ust");
+ust.setLocation("manila");
+ust.setPopulation(40000);
+
+console.group(`${ust.getName()} ${ust.getLocation()} has a population of ${ust.getPopulation()}`);
