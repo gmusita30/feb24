@@ -1,14 +1,11 @@
-class Student{
-    constructor(name, course, section){
-        this.name = name;
-        this.course = course;
-        this.section = section;
-    }
-    enroll(subject){
-        console.log(`${this.name}, ${this.course}, is enrolled in section ${this.section}`);
-        console.log(`he is studying ${subject}`);
-    }
-}
+//prototype
+let stud1 = {name: "jsl", section: "itf", course: "IT", 
+    study:function(subject){
+    console.log(`${this.name} is enrolled in ${this.subject}`);
 
-let stud1 = new Student("jdl", "12","itf");
-stud1.enroll("ics2609");
+}};
+stud1.study("ics2609")
+
+let stud2 = {name:"pdl", course:"IT", section:"itf"};
+
+stud2.study("ics2609");
