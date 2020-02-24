@@ -1,12 +1,17 @@
-//bind function demo
+class School{
+    static location = "manila";
+    static population = "40000";
+    
+    constructor(name, population, location){
+        this.name = name;
+        this.population = population;
+        this.location = location;
+    }
 
-let stud1 = {name:"jdl"};
-let stud2 = {name:"pedro"};
+  static offer(course){
+        console.log(`${this.name} located in ${this.location} has a population of ${this.population}`);
+    }
+}
 
-
-let study = function(subject, section){
-    console.log(`${this.name} is enrolled in ${subject}, section ${section}`);
-};
-
- let s = study.bind(stud2);
-s("biology", "itf");
+let ust = new School("ust", 40000, "manila");
+School.offer("IT");
