@@ -1,22 +1,10 @@
-//constructor function
+//call function demo
 
-function Student(name, course, section){
-    this.name = name;
-    this.course = course;
-    this.section = section;
+let stud1 = {name:"jdl"};
+let stud2 = {name:"pedro"};
 
-}
-
-Student.prototype.study = function(subject){
+let study = function(subject){
     console.log(`${this.name} is enrolled in ${subject}`);
-
 }
-Student.prototype.school = "UST"
 
-let stud1 = new Student("jdl", "it", "itf");
-let stud2 = new Student("juan", "it", "itf");
-
-stud1.study("Biology");
-stud2.study("algebra");
-
-console.log(stud1.school);
+study.call(stud1, "Science");
