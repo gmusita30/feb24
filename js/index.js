@@ -1,11 +1,22 @@
-//prototype
-let stud1 = {name: "jsl", section: "itf", course: "IT", 
-    study:function(subject){
-    console.log(`${this.name} is enrolled in ${this.subject}`);
+//constructor function
 
-}};
-stud1.study("ics2609")
+function Student(name, course, section){
+    this.name = name;
+    this.course = course;
+    this.section = section;
 
-let stud2 = {name:"pdl", course:"IT", section:"itf"};
+}
 
-stud2.study("ics2609");
+Student.prototype.study = function(subject){
+    console.log(`${this.name} is enrolled in ${subject}`);
+
+}
+Student.prototype.school = "UST"
+
+let stud1 = new Student("jdl", "it", "itf");
+let stud2 = new Student("juan", "it", "itf");
+
+stud1.study("Biology");
+stud2.study("algebra");
+
+console.log(stud1.school);
